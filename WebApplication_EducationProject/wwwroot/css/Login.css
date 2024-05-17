@@ -1,0 +1,93 @@
+.body-login .close {
+    margin-top: -550px;
+    position: absolute;
+    margin-left: 570px;
+}
+
+    .body-login .close:hover {
+        color: red;
+    }
+
+.body-login {
+    /* width: 100%;
+    min-height: 100vh;*/
+    display: flex;
+    align-items: center;
+    /* background: linear-gradient(45deg, #000, #fff); */
+}
+
+    .body-login .login {
+        background-color: #fff;
+        box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
+        padding: 80px 150px;
+        text-align: center;
+        border-radius: 30px;
+    }
+
+        .body-login .login h2 {
+            text-align: center;
+            font-size: 3em;
+            letter-spacing: 2px;
+            font-weight: bold;
+            color: #003cff;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .body-login .login .box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+    .body-login input {
+        position: relative;
+        width: 300px;
+        height: 50px;
+        text-indent: 10px;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        outline: none;
+        font-size: 1.1em;
+        transition: linear 0.2s;
+    }
+
+        .body-login input:focus {
+            border-color: #003cff;
+            text-indent: 20px;
+        }
+
+    .body-login .btnLogin {
+        display: inline-block;
+        padding: 10px 45px;
+        margin-top: 20px;
+        color: #003cff;
+        text-decoration: none;
+        font-size: 1.2em;
+        border-radius: 10px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.2), -2px -2px #f1f1f1, inset 2px 2px rgba(0, 0, 0, 0.2), inset -2px -2px #f1f1f1;
+        transition: linear 0.2s;
+    }
+
+        .body-login .btnLogin:hover {
+            background-color: #003cff;
+            color: #fff;
+            box-shadow: none;
+        }
+
+    .body-login .query {
+        margin-top: 20px;
+    }
+
+        .body-login .query p {
+            margin-top: 8px;
+        }
+
+    .body-login .text-red {
+        margin-top: 20px;
+    }
+
+        .body-login .text-red p {
+            color: red;
+        }

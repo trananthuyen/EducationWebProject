@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    padding: 200px;
+    background: linear-gradient(45deg, #000, #fff);
+}
+
+.form {
+    background-color: #fff;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
+    padding: 300px 200px;
+    border-radius: 30px;
+    margin-top: -150px;
+}
+
+.form .interact {
+    margin-left: 400px;
+    margin-top: -250px;
+    float: left;
+}
+
+.form .interact img {
+    height: 250px;  
+    border-radius: 20px;  
+}
+
+.form .content {
+    margin-left: -120px;
+    margin-top: -380px;
+}
+
+
+.form .content .infor-course {
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.btn {
+    margin-top: 100px;
+    margin-left: 430px;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-family: Verdana;
+    
+}
+
+ .Test-btn {
+    margin-top: -20px;
+    text-align: center;
+    background-color: rgb(82, 173, 82);
+    width: 350px;
+    height: 30px;
+    border-radius: 12px;
+}
+
+ .btn2 div {
+    margin-top: 80px;
+    width: 400px;
+ }
+
+ .btn2 a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-family: Verdana;
+    
+}
+
+ .rate-btn {
+    margin-top: -50px;
+    text-align: center;
+    background-color: rgb(82, 173, 82);
+    width: 350px;
+    height: 30px;
+    border-radius: 12px;
+ }
+
+ .Test-btn:hover {
+   opacity: 0.7;
+}
+
+ .rate-btn:hover {
+    opacity: 0.7;
+}
+
+.rate {
+    margin-left: -120px;
+
+    
+}
+
+.rate .content-infor {
+    float: left;
+    padding-right: 20px;
+    background: linear-gradient(45deg, #ffd195, #ffb2f3);
+    border-radius: 12px;
+    width: 400px;
+}
+
+.rate div {
+    text-align: center;
+}
+
+.rate div p {
+    padding-bottom: 20px;
+    
+}
+
+
+
+.rate .ti-star {
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    
+}
+
+.rate i {
+    cursor: pointer;
+}
+
+.rate i.active {
+    color: yellow;
+}
+
+.comment {
+    margin-top: 50px;
+    
+}
+
+.comment input {
+    height: 50px;
+    width: 300px;
+}
+

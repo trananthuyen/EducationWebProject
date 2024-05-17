@@ -1,0 +1,131 @@
+﻿@using ServiceContracts.DTO;
+
+@{
+    ViewBag.Title = "IndexLoginAccess";
+}
+<head>
+    <link rel="stylesheet" href="~/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/themify-icons-font/themify-icons/themify-icons.css" />
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <ul id="nav">
+                <li>
+                    <a href="">
+                        <i class="ti-home"></i>
+                        Home
+                    </a>
+                </li>
+                <li><a href="">Course</a></li>
+                <li><a href="">Contact</a></li>
+
+            </ul>
+
+            <ul id="nav-right">
+                <li id="logo"><a>ATLearning.com</a></li>
+                <li><a >@ViewBag.AccountName</a></li>
+                <li><a asp-action="Index">Log Out</a></li>
+            </ul>
+
+
+
+        </div>
+
+        <div id="slider">
+
+            <div class="text-content">
+
+                <div class="text-description"><h3>Learn to change the future</h3></div>
+            </div>
+        </div>
+
+        <div id="content">
+
+            <div class="form">
+                <div class="text-content">
+                    <div class="text"><a>Learn from <b>275+</b> leading universities and companies with ATLearning</a></div>
+                    <div class="logo">
+                        <span class="logo_ursera"><img src="~/pictures/course1.png"></span>
+                        <span class="logo_google"><img src="~/pictures/images (1).png"></span>
+                        <span class="logo_undemy"><img src="~/pictures/images.png"></span>
+                        <div class="hr_fist"><hr></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="course">
+
+                <div class="course-list">
+                    <img src="~/pictures/aspnetcore.jpg" alt="aspnetcore">
+                    <div class="course-body">
+                        <h3 class="course-heading">Learn asp.net core</h3>
+                        <p class="course-content">for beginner</p>
+                        <div class="course-learn-btn">
+                            <div class="Learn-btn"><a asp-action="Course">Learn Course</a></div>
+                            <div class="rate-btn"><a asp-action="Course">Rate Course</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-list">
+                    <img src="~/pictures/cplusplus.jpg" alt="c++">
+                    <div class="course-body">
+                        <h3 class="course-heading">Learn C++</h3>
+                        <p class="course-content">for beginner</p>
+                        <div class="course-learn-btn">
+                            <div class="Learn-btn"><a href="">Learn Course</a></div>
+                            <div class="rate-btn"><a href="">Rate Course</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-list">
+                    <img src="~/pictures/htmlcss.jpg" alt="htmlAndcss">
+                    <div class="course-body">
+                        <h3 class="course-heading">Learn html & css</h3>
+                        <p class="course-content">for beginner</p>
+                        <div class="course-learn-btn">
+                            <div class="Learn-btn"><a href="">Learn Course</a></div>
+                            <div class="rate-btn"><a href="">Rate Course</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-list">
+                    <img src="~/pictures/machinelearning.jpg" alt="machinlearning">
+                    <div class="course-body">
+                        <h3 class="course-heading">Learn machine learning</h3>
+                        <p class="course-content">for beginner</p>
+                        <div class="course-learn-btn">
+                            <div class="Learn-btn"><a href="">Learn Course</a></div>
+                            <div class="rate-btn"><a href="">Rate Course</a></div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="footer-infor">
+                <div>
+                    <p><i class="ti-mobile"></i> Contact: (84+)912345678</p>
+                </div>
+                <div>
+                    <p><i class="ti-email"></i> Email: TATCompany2024@gmail.com</p>
+                </div>
+            </div>
+            <div>
+                <p class="copyright">
+                    Copyright© 2024 TAT Company
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+

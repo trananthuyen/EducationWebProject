@@ -1,0 +1,292 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+
+#header {
+    height: 46px;
+    background-color: #000;
+}
+
+#nav {
+    display: inline-block; /*vi nav chan het chieu ngang nen se day cac block khac xuong, chi cho phep nav phu mo phan nhat dinh tren thanh*/
+}
+
+
+    #nav li {
+        display: inline-block;
+    }
+
+        #nav li a {
+            color: #fff;
+            text-decoration: none;
+            line-height: 46px;
+            padding: 0 24px;
+            display: inline-block; /*kich co the a tran len header*/
+        }
+
+        /*chuyen doi mau sac khi ta di chuyen con chuot vao*/
+        #nav li:hover a {
+            color: #000;
+            background-color: #ccc;
+        }
+
+/*-------------------------------------------------------*/
+#header #nav-right li {
+    display: inline;
+    cursor: pointer;
+}
+
+#header #nav-right {
+    float: right;
+    text-decoration: none;
+}
+
+    #header #nav-right li a {
+        display: inline-block; /*kich co the a tran len header*/
+        text-decoration: none;
+        line-height: 46px;
+        padding: 0 24px;
+    }
+
+    #header #nav-right li a {
+        color: #fff;
+    }
+
+    #header #nav-right #logo a {
+        color: #fff;
+        font-family: revert;
+    }
+
+    #header #nav-right #logo {
+        padding-right: 100px;
+    }
+
+    /*chuyen doi mau sac khi ta di chuyen con chuot vao*/
+    #header #nav-right li:hover a {
+        color: #000;
+        background-color: #ccc;
+        cursor: pointer;
+    }
+
+#header .search-btn {
+    float: right;
+    color: #fff;
+    line-height: 46px;
+    padding: 0 240px;
+}
+
+#slider {
+    height: 600px;
+    width: 100%;
+    filter: brightness(80%);
+    background: url("/pictures/EducationPicture.jpg");
+}
+
+    #slider .text-content {
+        display: flex;
+        justify-content: center;
+        padding-top: 30%;
+    }
+
+
+
+    #slider .text-description h3 {
+        color: #fff;
+        font-size: 30px;
+    }
+
+#content .form {
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    display: inline-block;
+}
+
+#content .logo {
+    padding-top: 50px;
+}
+
+#content .text-content {
+    text-align: center;
+    padding-top: 50px;
+}
+
+#content .text {
+    text-align: center;
+}
+
+    #content .text a {
+        font-size: 24px;
+    }
+
+#content .logo_google {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-right: -30px;
+}
+
+#content .logo_ursera img {
+    height: 117px;
+}
+
+#content .hr_fist {
+    padding-top: 20px;
+}
+
+#content .course {
+    background-color: rgb(182, 214, 236);
+    height: 500px;
+    ;
+}
+
+#footer {
+    background-color: #272323;
+    padding: 40px 24px 24px 24px;
+}
+
+    #footer .copyright {
+        text-align: center;
+        color: #e0d8d8;
+        padding-top: 60px;
+    }
+
+.course img {
+    height: 180px;
+    width: 316px;
+    display: block;
+}
+
+    .course img:hover {
+        opacity: 0.5;
+    }
+
+.course-body {
+    background-color: #fff;
+    height: 200px;
+    padding: 16px;
+    padding-left: 30px;
+    font-size: 20px;
+}
+
+.course .course-body .course-content {
+    padding-top: 15px;
+}
+
+.course .course-body .course-learn-btn {
+    padding-top: 50px;
+}
+
+
+
+#content .course-list {
+    float: left;
+    padding-top: 80px;
+    padding-left: 50px;
+}
+
+.course-list .course-learn-btn a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-family: Verdana;
+}
+
+.course-list .course-learn-btn .Learn-btn {
+    margin-top: -20px;
+    text-align: center;
+    background-color: rgb(82, 173, 82);
+    width: 250px;
+    border-radius: 12px;
+}
+
+.course-list .course-learn-btn .rate-btn {
+    margin-top: 10px;
+    text-align: center;
+    background-color: rgb(82, 173, 82);
+    width: 250px;
+    border-radius: 12px;
+}
+
+.course-list .course-learn-btn .Learn-btn:hover {
+    opacity: 0.7;
+}
+
+.course-list .course-learn-btn .rate-btn:hover {
+    opacity: 0.7;
+}
+
+#footer .footer-infor {
+    float: right;
+    padding-right: 50px;
+    color: #e0d8d8;
+}
+
+
+
+.login-iframe {
+    visibility: hidden;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    margin-top: 5%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+}
+
+    .login-iframe .close {
+        position: absolute;
+        z-index: 3;
+        margin-left: 590px;
+        margin-top: 20px;
+    }
+
+.ti-close:hover {
+    color: red;
+}
+
+
+.signup-iframe {
+    visibility: hidden;
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+    .signup-iframe .close {
+        position: absolute;
+        z-index: 5;
+        margin-left: 590px;
+        margin-top: 20px;
+    }
+
+.frost {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    background-color: #000;
+    opacity: 0.5;
+    height: 214%;
+    width: 100%;
+}
+
+    .frost.frost-form {
+        visibility: visible;
+    }
+
+.login-iframe.show-login {
+    visibility: visible;
+}
+
+.signup-iframe.show-signup {
+    visibility: visible;
+}

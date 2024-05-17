@@ -1,0 +1,37 @@
+﻿@using ServiceContracts.DTO;
+@model AccountAddRequest
+@{
+    ViewBag.Title = "Signup";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Signup.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/themify-icons-font/themify-icons/themify-icons.css" />
+</head>
+<body class="body-signup">
+    <div class="signup">
+        <h2>Sign Up</h2>
+        <form asp-controller="Home" asp-action="Signup" method="post">
+            <div class="box">
+                <input asp-for="accountName" type="text" placeholder="Username">
+            </div>
+            <div class="box">
+                <input asp-for="password" type="password" placeholder="Password">
+            </div>
+            <div class="box">
+                <input asp-for="rpassword" type="password" placeholder="Password">
+            </div>
+            <button class="btnSignup">Sign Up</button>
+            <div class="text-red"><p>@ViewBag.ErrorMessage</p></div>
+            <div class="query">
+                <p>have an account? <a asp-action="Login">Log in here</a></p>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>
