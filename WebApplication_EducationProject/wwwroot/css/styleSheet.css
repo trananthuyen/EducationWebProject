@@ -232,29 +232,20 @@ html {
 
 
 .login-iframe {
-    visibility: hidden;
+    /*visibility: hidden;*/
     position: absolute;
     z-index: 2;
-    top: 50%;
+    top: 40%;
     margin-top: 5%;
     left: 50%;
     transform: translate(-50%, -45%);
 }
 
-    .login-iframe .close {
-        position: absolute;
-        z-index: 3;
-        margin-left: 590px;
-        margin-top: 20px;
-    }
-
-.ti-close:hover {
-    color: red;
-}
+   
 
 
 .signup-iframe {
-    visibility: hidden;
+    /*visibility: hidden;*/
     position: absolute;
     z-index: 4;
     top: 50%;
@@ -262,15 +253,11 @@ html {
     transform: translate(-50%, -35%);
 }
 
-    .signup-iframe .close {
-        position: absolute;
-        z-index: 5;
-        margin-left: 590px;
-        margin-top: 20px;
-    }
+   
 
 .frost {
-    visibility: hidden;
+    /*visibility: hidden;*/
+    /*visibility: visible;*/
     position: absolute;
     z-index: 1;
     background-color: #000;
@@ -279,9 +266,10 @@ html {
     width: 100%;
 }
 
-    .frost.frost-form {
-        visibility: visible;
-    }
+/*
+.frost.frost-form {
+        
+ }
 
 .login-iframe.show-login {
     visibility: visible;
@@ -289,4 +277,4 @@ html {
 
 .signup-iframe.show-signup {
     visibility: visible;
-}
+}*/
