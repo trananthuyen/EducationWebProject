@@ -26,42 +26,6 @@ namespace WebApplicationEdu.Controllers
             return View();
         }
 
- /*       [HttpPost]
-        [Route("Index")]
-        public IActionResult Index(AccountAddRequest? accountAddRequest)
-        {
-              if(ViewBag.Title == "Login")
-              {
-                  try
-                  {
-                      _accountService.LoginAccount(accountAddRequest);
-                      _accountHasAccess = accountAddRequest.ToAccount();
-
-                      return View("IndexLoginAccess", "Home");
-                  }
-                  catch (Exception? ex)
-                  {
-                    return View(ex);
-                  }
-              }
-              if(ViewBag.Title == "Signup")
-              {
-                  try
-                  {
-                      _accountService.SignUpAccount(accountAddRequest);
-                      ViewBag.ErrorMessage = "Sign up is success! ";
-                      // return View("Login", "Home"); //error vi goi post khong phai goi get
-                      return View();
-                  }
-                  catch (Exception ex)
-                  {
-                      ViewBag.ErrorMessage = ex.Message;
-                      return RedirectToAction("Login", "Home");
-                  }
-              }
-
-            return View();
-        }*/
 
          [HttpGet]
          [Route("IndexLoginAccess")]
@@ -71,23 +35,7 @@ namespace WebApplicationEdu.Controllers
              return View();
          }
 
-        /*
-         [HttpPost]
-         public IActionResult Login(Exception? ex)
-         {
-             ViewBag.ErrorMessage = ex.Message;
-             return View();
-
-         }
-
-         [HttpGet]
-         public IActionResult Signup(Exception? ex)
-         {
-             ViewBag.ErrorMessage = ex.Message;
-             return View();
-         }
-
-         */
+       
         [HttpGet]
         [Route("Signup")]
         public IActionResult Signup()
@@ -119,7 +67,7 @@ namespace WebApplicationEdu.Controllers
             }
             catch (Exception? ex)
             {
-                ViewBag.ErrorMessage = ex.Message;
+                ViewBag.Message = ex.Message;
                 return View();
             }
         }
@@ -136,13 +84,13 @@ namespace WebApplicationEdu.Controllers
             try
             {
                 _accountService.SignUpAccount(accountAddRequest);
-                ViewBag.ErrorMessage = "Sign up is success! ";
+                ViewBag.Message = "Sign up is success! ";
                 // return View("Login", "Home"); //error vi goi post khong phai goi get
-                return View("IndexLoginAccess", "Home");
+                return View("Login");
             }
             catch (Exception ex)
             {
-                ViewBag.ErrorMessage = ex.Message;
+                ViewBag.Message = ex.Message;
                 return View();
             }
 

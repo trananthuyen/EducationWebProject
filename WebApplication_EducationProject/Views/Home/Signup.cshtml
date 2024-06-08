@@ -7,8 +7,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/css/signupSheet.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/styleSheet.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/themify-icons-font/themify-icons/themify-icons.css" />
@@ -60,10 +58,10 @@
                         <input asp-for="password" type="password" placeholder="Password">
                     </div>
                     <div class="box">
-                        <input asp-for="rpassword" type="password" placeholder="Password">
+                        <input asp-for="rpassword" type="password" placeholder="Confirm Password">
                     </div>
                     <button class="btnSignup">Sign Up</button>
-                    <div class="text-red"><p>@ViewBag.ErrorMessage</p></div>
+                    <div class="text-red"><p>@ViewBag.Message</p></div>
                     <div class="query">
                         <p>have an account? <a asp-action="Login">Log in here</a></p>
                     </div>
