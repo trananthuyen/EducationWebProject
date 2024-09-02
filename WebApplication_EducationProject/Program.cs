@@ -29,6 +29,8 @@ if (builder.Environment.IsDevelopment())  //buider environment for developer to 
 
 app.UseStaticFiles();
 app.UseRouting();
+
+
 app.MapControllers();
 app.Run();
 

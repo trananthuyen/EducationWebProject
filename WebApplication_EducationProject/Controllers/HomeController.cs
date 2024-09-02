@@ -4,6 +4,8 @@ using ServiceContracts;
 using Services;
 using Entitites;
 using System.Reflection.Metadata;
+using Microsoft.Identity.Client;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace WebApplicationEdu.Controllers
 {
@@ -11,7 +13,7 @@ namespace WebApplicationEdu.Controllers
     public class HomeController : Controller
     {
         private IAccountService _accountService;
-        private static Account _accountHasAccess;
+        private static string _accountName;
 
         public HomeController(IAccountService accountService)
         {
@@ -23,15 +25,17 @@ namespace WebApplicationEdu.Controllers
         [Route("Index")]
         public IActionResult Index()
         {
+            
             return View();
         }
 
 
          [HttpGet]
-         [Route("IndexLoginAccess")]
+         [Route("IndexLoginAccess/{accountId}")]
          public IActionResult IndexLoginAccess()
          {
-             ViewBag.AccountName = _accountHasAccess.accountName;
+            
+             ViewBag.AccountName = _accountName;
              return View();
          }
 
@@ -58,10 +62,12 @@ namespace WebApplicationEdu.Controllers
             try
             {
                 _accountService.LoginAccount(accountAddRequest);
-                _accountHasAccess = accountAddRequest.ToAccount();
+                _accountName = _accountService.GetNameAccount();
 
-                
-                return RedirectToAction("IndexLoginAccess", "Home");
+                Guid accountId = _accountService.LogInAccountId();
+
+               
+                return RedirectToAction("IndexLoginAccess",  new { accountId });
 
 
             }
