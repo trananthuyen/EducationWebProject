@@ -2,7 +2,7 @@
 
 namespace WebApplication_EducationProject.Controllers
 {
-    public class AdminController1 : Controller
+    public class AdminController : Controller
     {
         [Route("/foradmin")]
         public IActionResult Index()
