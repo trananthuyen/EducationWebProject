@@ -1,30 +1,36 @@
-.body-login .close {
-    margin-top: -550px;
+.body-signup .close {
+    margin-top: -560px;
     position: absolute;
     margin-left: 570px;
+    cursor: pointer;
 }
 
-    .body-login .close:hover {
+    .body-signup a:hover {
         color: red;
     }
 
-.body-login {
-    /* width: 100%;
-    min-height: 100vh;*/
-    display: flex;
-    align-items: center;
-    /* background: linear-gradient(45deg, #000, #fff); */
+.body-signup a {
+    text-decoration: none;
 }
 
-    .body-login .login {
+
+.body-signup {
+    /*  width: 100%;
+    min-height: 100vh; */
+    display: flex;
+    align-items: center;
+    /*background: linear-gradient(45deg, #000, #fff);*/
+}
+
+    .body-signup .signup {
         background-color: #fff;
         box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
-        padding: 80px 150px;
+        padding: 90px 150px;
         text-align: center;
         border-radius: 30px;
     }
 
-        .body-login .login h2 {
+        .body-signup .signup h2 {
             text-align: center;
             font-size: 3em;
             letter-spacing: 2px;
@@ -34,12 +40,12 @@
             text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
         }
 
-        .body-login .login .box {
+        .body-signup .signup .box {
             position: relative;
             margin-bottom: 20px;
         }
 
-    .body-login input {
+    .body-signup input {
         position: relative;
         width: 300px;
         height: 50px;
@@ -51,12 +57,12 @@
         transition: linear 0.2s;
     }
 
-        .body-login input:focus {
+        .body-signup input:focus {
             border-color: #003cff;
             text-indent: 20px;
         }
 
-    .body-login .btnLogin {
+    .body-signup .btnSignup {
         display: inline-block;
         padding: 10px 45px;
         margin-top: 20px;
@@ -70,24 +76,24 @@
         transition: linear 0.2s;
     }
 
-        .body-login .btnLogin:hover {
+        .body-signup .btnSignup:hover {
             background-color: #003cff;
             color: #fff;
             box-shadow: none;
         }
 
-    .body-login .query {
+    .body-signup .query {
         margin-top: 20px;
     }
 
-        .body-login .query p {
+        .body-signup .query p {
             margin-top: 8px;
         }
 
-    .body-login .text-red {
-        margin-top: 20px;
+    .body-signup .text-red {
+        margin-top: 40px;
     }
 
-        .body-login .text-red p {
+        .body-signup .text-red p {
             color: red;
         }

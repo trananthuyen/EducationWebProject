@@ -4,6 +4,8 @@ using ServiceContracts;
 using Services;
 using Entitites;
 using System.Reflection.Metadata;
+using Microsoft.Identity.Client;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace WebApplicationEdu.Controllers
 {
@@ -11,7 +13,7 @@ namespace WebApplicationEdu.Controllers
     public class HomeController : Controller
     {
         private IAccountService _accountService;
-        private static Account _accountHasAccess;
+        private static string _accountName;
 
         public HomeController(IAccountService accountService)
         {
@@ -23,71 +25,21 @@ namespace WebApplicationEdu.Controllers
         [Route("Index")]
         public IActionResult Index()
         {
+            
             return View();
         }
 
- /*       [HttpPost]
-        [Route("Index")]
-        public IActionResult Index(AccountAddRequest? accountAddRequest)
-        {
-              if(ViewBag.Title == "Login")
-              {
-                  try
-                  {
-                      _accountService.LoginAccount(accountAddRequest);
-                      _accountHasAccess = accountAddRequest.ToAccount();
-
-                      return View("IndexLoginAccess", "Home");
-                  }
-                  catch (Exception? ex)
-                  {
-                    return View(ex);
-                  }
-              }
-              if(ViewBag.Title == "Signup")
-              {
-                  try
-                  {
-                      _accountService.SignUpAccount(accountAddRequest);
-                      ViewBag.ErrorMessage = "Sign up is success! ";
-                      // return View("Login", "Home"); //error vi goi post khong phai goi get
-                      return View();
-                  }
-                  catch (Exception ex)
-                  {
-                      ViewBag.ErrorMessage = ex.Message;
-                      return RedirectToAction("Login", "Home");
-                  }
-              }
-
-            return View();
-        }*/
 
          [HttpGet]
-         [Route("IndexLoginAccess")]
+         [Route("IndexLoginAccess/{accountId}")]
          public IActionResult IndexLoginAccess()
          {
-             ViewBag.AccountName = _accountHasAccess.accountName;
+            
+             ViewBag.AccountName = _accountName;
              return View();
          }
 
-        /*
-         [HttpPost]
-         public IActionResult Login(Exception? ex)
-         {
-             ViewBag.ErrorMessage = ex.Message;
-             return View();
-
-         }
-
-         [HttpGet]
-         public IActionResult Signup(Exception? ex)
-         {
-             ViewBag.ErrorMessage = ex.Message;
-             return View();
-         }
-
-         */
+       
         [HttpGet]
         [Route("Signup")]
         public IActionResult Signup()
@@ -110,16 +62,18 @@ namespace WebApplicationEdu.Controllers
             try
             {
                 _accountService.LoginAccount(accountAddRequest);
-                _accountHasAccess = accountAddRequest.ToAccount();
+                _accountName = _accountService.GetNameAccount();
 
-                
-                return RedirectToAction("IndexLoginAccess", "Home");
+                Guid accountId = _accountService.LogInAccountId();
+
+               
+                return RedirectToAction("IndexLoginAccess",  new { accountId });
 
 
             }
             catch (Exception? ex)
             {
-                ViewBag.ErrorMessage = ex.Message;
+                ViewBag.Message = ex.Message;
                 return View();
             }
         }
@@ -136,13 +90,13 @@ namespace WebApplicationEdu.Controllers
             try
             {
                 _accountService.SignUpAccount(accountAddRequest);
-                ViewBag.ErrorMessage = "Sign up is success! ";
+                ViewBag.Message = "Sign up is success! ";
                 // return View("Login", "Home"); //error vi goi post khong phai goi get
-                return View("IndexLoginAccess", "Home");
+                return View("Login");
             }
             catch (Exception ex)
             {
-                ViewBag.ErrorMessage = ex.Message;
+                ViewBag.Message = ex.Message;
                 return View();
             }
 
